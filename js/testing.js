@@ -5,11 +5,11 @@ Date.prototype.sqlformat = function() {
   var mn = this.getMinutes();
   var sc = this.getSeconds();
 
-  return [this.getFullYear(),
-          (mm>9 ? '' : '0') + mm + "-",
-          (dd>9 ? '' : '0') + dd + " ",
-          (hr>9 ? '' : '0') + hr + ":",
-          (mn>9 ? '' : '0') + mn + ":",
+  return [this.getFullYear(), "-",
+          (mm>9 ? '' : '0') + mm, "-",
+          (dd>9 ? '' : '0') + dd, " ",
+          (hr>9 ? '' : '0') + hr, ":",
+          (mn>9 ? '' : '0') + mn, ":",
           (sc>9 ? '' : '0') + sc
          ].join('');
 };
